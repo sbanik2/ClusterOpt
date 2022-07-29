@@ -1,0 +1,25 @@
+Structfunc.py:5:1: F401 'math' imported but unused
+Structfunc.py:6:1: F401 'os' imported but unused
+Structfunc.py:8:1: F401 'copy.deepcopy' imported but unused
+Structfunc.py:9:1: F401 'glob.glob' imported but unused
+Structfunc.py:11:1: F403 'from math import *' used; unable to detect undefined names
+Structfunc.py:12:1: F401 'math.exp' imported but unused
+Structfunc.py:12:1: F401 'math.pi' imported but unused
+Structfunc.py:12:1: F401 'math.sqrt' imported but unused
+Structfunc.py:13:1: F403 'from random import *' used; unable to detect undefined names
+Structfunc.py:14:1: F401 'random.choice' imported but unused
+Structfunc.py:14:1: F401 'random.choices' imported but unused
+Structfunc.py:14:1: F401 'random.gauss' imported but unused
+Structfunc.py:14:1: F401 'random.randint' imported but unused
+Structfunc.py:14:1: F401 'random.sample' imported but unused
+Structfunc.py:17:1: F401 'ase.io' imported but unused
+Structfunc.py:21:1: F401 'pymatgen.core.sites.PeriodicSite' imported but unused
+Structfunc.py:21:1: F401 'pymatgen.core.sites.Site' imported but unused
+Structfunc.py:53:5: F841 local variable 'factor' is assigned to but never used
+Structfunc.py:118:9: E722 do not use bare 'except'
+Structfunc.py:130:9: E722 do not use bare 'except'
+Structfunc.py:177:5: F841 local variable 'natoms' is assigned to but never used
+Structfunc.py:178:5: F841 local variable 'vpa' is assigned to but never used
+Structfunc.py:283:5: F841 local variable 'natoms' is assigned to but never used
+Structfunc.py:306:5: F841 local variable 'natoms' is assigned to but never used
+Structfunc.py:323:39: F405 'shape' may be undefined, or defined from star imports: math, random
