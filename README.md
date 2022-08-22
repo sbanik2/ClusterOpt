@@ -117,8 +117,19 @@ basinhopping(fun,
             )
 ```
 details of individual hyperparameters for the basinhopping optimizer can be found here https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.basinhopping.html.
+The optimization produces a "dumpfile.dat" output containing all the crystal paramameres and the energy values as the output. The best values and the best crystal structure corresponding to the least energy can be extracted using 
+        
+ ``` python
+        
+Status("dumpfile.dat")
+
+CreateStructure("dumpfile.dat","./",nStructure=1)
+        
+```
 
 
+        
+# 
 
 ### Citation
 ```
