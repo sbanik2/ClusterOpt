@@ -1,4 +1,4 @@
-ClusterOpt
+#ClusterOpt
 
 <p align="justify"> Implementation of Basin Hopping Global Optimization method for optimization of Atomic nanoclusters. </p>
 
@@ -36,11 +36,12 @@ Install the anaconda package (https://docs.anaconda.com/anaconda/install/). Then
 conda env create --name ClusterOpt -f environment.yml
 conda activate ClusterOpt
 ```
-```
+
 For installation with pypi
 
 ```
 pip install ClusterOpt
+
 ```
 ***The package requires lammps binding to run. First lammps package needs to be downloaded from and compiled and the instructions https://www.lammps.org/download.html on python integration can be found here https://docs.lammps.org/Python_install.html.
 
