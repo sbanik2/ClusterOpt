@@ -13,7 +13,7 @@ The following paper describes the details of the CGCNN framework:
 - [License](#license)
 
 ## Introduction
-<p align="justify">  This package implements the Basin Hopping global optimization method in scipy(https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.basinhopping.html.) along with LAMMPS (https://www.lammps.org/) MD (Molecular dynamic simulation) package to find the global minima of atomic system (Single or Multicomponent) </p>
+<p align="justify">  This package implements the Basin Hopping global optimization method in scipy (https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.basinhopping.html) along with LAMMPS (https://www.lammps.org/) MD (Molecular dynamic simulation) package to find the global minima of atomic system (Single or Multicomponent) </p>
 
 <p align="center"> <a href="url"><img src="https://github.com/sbanik2/CEGAN/blob/main/Figs/Workflow.png" align="center" height="400" width="600" ></a> </p>
 
@@ -49,7 +49,7 @@ pip install ClusterOpt
 
 
 ### Running the code
-An example of running run directory provided in the example section. First all the parameters crystal and the lammps pair_style and pair_coeff should be set. The composition is given for e.g., a Au<2>Al<3> as "composition":{"Au":2,"Al:3"}, the minimum interatomic distances as a pandas dataframe with rows and coluns belong to each species in the same order they are mentioned in the composition. 
+<p align="justify"> An example of running run directory provided in the example section. First all the parameters crystal and the lammps pair_style and pair_coeff should be set. The composition is given for e.g., a Au<2>Al<3> as "composition":{"Au":2,"Al:3"}, the minimum interatomic distances as a pandas dataframe with rows and coluns belong to each species in the same order they are mentioned in the composition. <\p>
 
 ``` python
 import numpy as np
