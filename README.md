@@ -147,5 +147,4 @@ CreateStructure("dumpfile.dat","./",nStructure=1)
         
 ### License
 CEGAN is licensed under the MIT License
-![image](https://user-images.githubusercontent.com/66140668/185830167-753fbfcd-76fa-4c55-8140-41216a2a713d.png)
 
