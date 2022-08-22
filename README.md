@@ -116,7 +116,7 @@ basinhopping(fun,
              seed=None, 
             )
 ```
-
+details of individual hyperparameters for the basinhopping optimizer can be found here https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.basinhopping.html.
 
 
 
