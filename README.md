@@ -13,7 +13,7 @@ The following paper describes the details of the CGCNN framework:
 - [License](#license)
 
 ## Introduction
-<p align="justify"> This package implements the Basin Hopping global optimization method in scipy (https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.basinhopping.html) along with LAMMPS (https://www.lammps.org/) MD (Molecular dynamic simulation) package to find the global minima of atomic system (Single or Multicomponent) </p>
+This package implements the Basin Hopping global optimization method in [scipy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.basinhopping.html) along with [LAMMPS](https://www.lammps.org/) MD (Molecular dynamic simulation) package to find the global minima of atomic system (Single or Multicomponent)
 
 <p align="center"> <a href="url"><img src="https://github.com/sbanik2/CEGAN/blob/main/Figs/Workflow.png" align="center" height="400" width="600" ></a> </p>
 
@@ -45,7 +45,7 @@ python setup.py install
 pip install ClusterOpt
 
 ```
-<p align="justify"> ***The package requires lammps binding to run. First lammps package needs to be downloaded from  [LAMMPS download](https://www.lammps.org/download.html) and compiled. The instructions on python integration can be found here [LAMMPS-Python](https://docs.lammps.org/Python_install.html).</p>
+***The package requires lammps binding to run. First lammps package needs to be downloaded from  [LAMMPS download](https://www.lammps.org/download.html) and compiled. The instructions on python integration can be found here [LAMMPS-Python](https://docs.lammps.org/Python_install.html).
 
 
 ### Running the code
