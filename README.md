@@ -35,6 +35,7 @@ Install the anaconda package (https://docs.anaconda.com/anaconda/install/). Then
 ```
 conda env create --name ClusterOpt -f environment.yml
 conda activate ClusterOpt
+git clone 
 ```
 
 For installation with pypi
