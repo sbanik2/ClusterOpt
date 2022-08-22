@@ -10,7 +10,7 @@ from random import *
 import ase
 import numpy as np
 import pandas as pd
-from pymatgen import Lattice, Structure
+from pymatgen.core import Lattice, Structure
 
 
 def gel_latt_coords(parameters):
@@ -84,8 +84,8 @@ def check_constrains(structData, constrains):
     species = structData["species"].copy()
     specieCount = dict(Counter(species))
     lattice, coords = gel_latt_coords(parameters)
-    
-    #print(species)
+
+    # print(species)
 
     natoms = constrains["atoms"]
     if natoms != coords.shape[0]:
@@ -99,7 +99,6 @@ def check_constrains(structData, constrains):
 
     M = np.array((latt.matrix))
 
-    
     D = DistanceMatrix(coords, M)
 
     np.fill_diagonal(D, 1e300)
@@ -174,8 +173,8 @@ def DistanceMatrix(frac_coordinates, M):
 
 
 def SructureFrmParams(structData, constrains, pad=20):
-    
-    #print(structData ["parameters"])
+
+    # print(structData ["parameters"])
 
     parameters = structData["parameters"].copy()
     species = structData["species"].copy()

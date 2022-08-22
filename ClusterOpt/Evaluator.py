@@ -9,7 +9,7 @@ import math
 from lammps import lammps
 from pymatgen.io.lammps.data import LammpsData
 
-from Structfunc import ParamsfromStruct, SructureFrmParams, check_constrains
+from ClusterOpt.Structfunc import ParamsfromStruct, SructureFrmParams, check_constrains
 
 # In[ ]:
 
@@ -39,33 +39,31 @@ class Custom_minimize(object):
         self.pair_style = self.lammps_args["pair_style"]
         self.pair_coeff = self.lammps_args["pair_coeff"]
         self.pad = self.lammps_args["pad"]
-        
+
         self.success = True
-        
+
         try:
             self.x, self.fun = self.minimize()
         except:
             self.success = False
-            
-            
+
     def minimize(self):
 
         structData = {
             "parameters": self.parameters,
             "species": [
-                list(self.constrains["composition"].keys())[0] for _ in range(self.constrains["atoms"])
+                list(self.constrains["composition"].keys())[0]
+                for _ in range(self.constrains["atoms"])
             ],
         }
-        
-        #print(structData ["species"])
-        #print(structData ["parameters"].copy())
+
+        # print(structData ["species"])
+        # print(structData ["parameters"].copy())
         if not check_constrains(structData, self.constrains):
             print("constraind failed")
-            return  self.parameters,1e300
+            return self.parameters, 1e300
 
-        struct = SructureFrmParams(
-            structData, self.constrains, pad=self.pad
-        )
+        struct = SructureFrmParams(structData, self.constrains, pad=self.pad)
         LammpsData.from_structure(struct, atom_style="atomic").write_file(
             "in.data"
         )
@@ -113,7 +111,7 @@ class Custom_minimize(object):
             write_file="dumpfile.dat",
             pad=self.pad,
         )
-        return outData ["parameters"],energy 
+        return outData["parameters"], energy
 
 
 class LammpsEvaluator(object):
@@ -137,8 +135,9 @@ class LammpsEvaluator(object):
 
         structData = {
             "parameters": parameters,
-            "species":  [
-                list(self.constrains["composition"].keys())[0] for _ in range(self.constrains["atoms"])
+            "species": [
+                list(self.constrains["composition"].keys())[0]
+                for _ in range(self.constrains["atoms"])
             ],
         }
 
