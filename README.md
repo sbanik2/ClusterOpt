@@ -129,17 +129,22 @@ CreateStructure("dumpfile.dat","./",nStructure=1)
 
 
         
-# 
+### Referenece
+    ```
+     1 . Wales, D. J., & Doye, J. P. (1997). Global optimization by basin-hopping and the lowest energy structures of Lennard-Jones clusters containing up to 110 atoms. The Journal of Physical Chemistry A, 101(28), 5111-5116.
+     2. Wales, D. J., & Scheraga, H. A. (1999). Global optimization of clusters, crystals, and biomolecules. Science, 285(5432), 1368-1372.   
+     ```
 
 ### Citation
 ```
-@article{banik2022cegan,
+        @article{banik2022cegan,
   title={CEGAN: Crystal Edge Graph Attention Network for multiscale classification of materials environment},
   author={Banik, Suvo and Dhabal, Debdas and Chan, Henry and Manna, Sukriti and Cherukara, Mathew and Molinero, Valeria and Sankaranarayanan, Subramanian KRS},
   journal={arXiv preprint arXiv:2207.10168},
   year={2022}
 }
 ```
+        
 ### License
 CEGAN is licensed under the MIT License
 ![image](https://user-images.githubusercontent.com/66140668/185830167-753fbfcd-76fa-4c55-8140-41216a2a713d.png)
