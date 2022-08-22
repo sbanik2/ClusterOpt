@@ -14,7 +14,7 @@
 ## Introduction
 This package implements the Basin Hopping global optimization method in [scipy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.basinhopping.html) along with [LAMMPS](https://www.lammps.org/) MD (Molecular dynamic simulation) package to find the global minima of atomic nanoclusters (Single or Multicomponent)
 
-<p align="center"> <a href="url"><img src="https://github.com/sbanik2/CEGAN/blob/main/Figs/Workflow.png" align="center" height="400" width="600" ></a> </p>
+<p align="center"> <a href="url"><img src="https://github.com/sbanik2/ClusterOpt/blob/main/Figs/cluster_opt.png" align="center" height="400" width="600" ></a> </p>
 
 
 
