@@ -2,7 +2,6 @@
 
 <p align="justify"> Implementation of Basin Hopping Global Optimization method for optimization of Atomic nanoclusters. </p>
 
-The following paper describes the details of the CGCNN framework:
 
 ## Table of Contents
 - [Introduction](#Introduction)
@@ -13,7 +12,7 @@ The following paper describes the details of the CGCNN framework:
 - [License](#license)
 
 ## Introduction
-This package implements the Basin Hopping global optimization method in [scipy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.basinhopping.html) along with [LAMMPS](https://www.lammps.org/) MD (Molecular dynamic simulation) package to find the global minima of atomic system (Single or Multicomponent)
+This package implements the Basin Hopping global optimization method in [scipy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.basinhopping.html) along with [LAMMPS](https://www.lammps.org/) MD (Molecular dynamic simulation) package to find the global minima of atomic nanoclusters (Single or Multicomponent)
 
 <p align="center"> <a href="url"><img src="https://github.com/sbanik2/CEGAN/blob/main/Figs/Workflow.png" align="center" height="400" width="600" ></a> </p>
 
@@ -45,11 +44,11 @@ python setup.py install
 pip install ClusterOpt
 
 ```
-***The package requires lammps binding to run. First lammps package needs to be downloaded from  [LAMMPS download](https://www.lammps.org/download.html) and compiled. The instructions on python integration can be found here [LAMMPS-Python](https://docs.lammps.org/Python_install.html).
+***The package requires lammps binding to run. First, lammps package needs to be downloaded from  [LAMMPS download](https://www.lammps.org/download.html) and compiled. The instructions on python integration can be found here [LAMMPS-Python](https://docs.lammps.org/Python_install.html).
 
 
 ### Running the code
-<p align="justify"> An example of running run directory provided in the example section. First all the parameters crystal and the lammps pair_style and pair_coeff should be set. The composition is given for e.g., a Au<2>Al<3> as "composition":{"Au":2,"Al:3"}, the minimum interatomic distances as a pandas dataframe with rows and columns belonging to each species in the same order they are mentioned in the composition. E.g.,</p>
+<p align="justify"> An example of running run directory provided in the example section. First all the parameters crystal and the lammps pair_style and pair_coeff should be set. The composition is given for e.g., a Au<2>Al<3> as "composition":{"Au":2,"Al:3"}, the minimum interatomic distances as a pandas data frame with rows and columns belonging to each species in the same order they are mentioned in the composition. E.g.,</p>
 
 ``` python
 import numpy as np
@@ -116,8 +115,8 @@ basinhopping(fun,
              seed=None, 
             )
 ```
-details of individual hyperparameters for the basinhopping optimizer can be found here [BasinHopping](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.basinhopping.html).
-The optimization produces a "dumpfile.dat" output containing all the crystal paramameres and the energy values as the output. The best values and the best crystal structure corresponding to the least energy can be extracted using
+details of individual hyperparameters for the basin hopping optimizer can be found here [BasinHopping](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.basinhopping.html).
+The optimization produces a "dumpfile.dat" output containing all the crystal parameters and the energy values as the output. The best values and the best crystal structure corresponding to the least energy can be extracted using
         
  ``` python
         
