@@ -150,5 +150,5 @@ CreateStructure("dumpfile.dat","./",nStructure=1)
 ```
         
 ### License
-CEGAN is licensed under the MIT License
+ClusterOpt is licensed under the MIT License
 
