@@ -35,10 +35,11 @@ Install the anaconda package (https://docs.anaconda.com/anaconda/install/). Then
 ```
 conda env create --name ClusterOpt -f environment.yml
 conda activate ClusterOpt
-git clone 
+git clone https://github.com/sbanik2/ClusterOpt.git
+python setup.py install
 ```
 
-For installation with pypi
+### Installation with pypi
 
 ```
 pip install ClusterOpt
@@ -48,7 +49,7 @@ pip install ClusterOpt
 
 
 ### Running the code
-An example of running run directory provided in the example section. First all the parameters crystal and the lammps pair_style and pair_coeff should be set
+An example of running run directory provided in the example section. First all the parameters crystal and the lammps pair_style and pair_coeff should be set. The composition is given for e.g., a Au<2>Al<3> as "composition":{"Au":2,"Al:3"}, the minimum interatomic distances as a pandas dataframe with rows and coluns belong to each species in the same order they are mentioned in the composition. 
 
 ``` python
 import numpy as np
@@ -81,6 +82,7 @@ lammps_args = {
 args = (constrains,lammps_args)
 
 ```
+
 
 
 
