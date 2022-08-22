@@ -30,7 +30,7 @@ This package requires:
 
 ## Installation
 
-#Manual Installation
+### Manual Installation
 Install the anaconda package (https://docs.anaconda.com/anaconda/install/). Then, 
 ```
 conda env create --name ClusterOpt -f environment.yml
