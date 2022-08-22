@@ -45,7 +45,7 @@ python setup.py install
 pip install ClusterOpt
 
 ```
-<p align="justify"> ***The package requires lammps binding to run. First lammps package needs to be downloaded from  https://www.lammps.org/download.html and compiled. The instructions on python integration can be found here https://docs.lammps.org/Python_install.html.</p>
+<p align="justify"> ***The package requires lammps binding to run. First lammps package needs to be downloaded from  [LAMMPS download](https://www.lammps.org/download.html) and compiled. The instructions on python integration can be found here [LAMMPS-Python](https://docs.lammps.org/Python_install.html).</p>
 
 
 ### Running the code
@@ -116,8 +116,8 @@ basinhopping(fun,
              seed=None, 
             )
 ```
-details of individual hyperparameters for the basinhopping optimizer can be found here [BasinHopping](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.basinhopping.html.)
-The optimization produces a "dumpfile.dat" output containing all the crystal paramameres and the energy values as the output. The best values and the best crystal structure corresponding to the least energy can be extracted using 
+<p align="justify"> details of individual hyperparameters for the basinhopping optimizer can be found here [BasinHopping](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.basinhopping.html).
+The optimization produces a "dumpfile.dat" output containing all the crystal paramameres and the energy values as the output. The best values and the best crystal structure corresponding to the least energy can be extracted using</p>
         
  ``` python
         
