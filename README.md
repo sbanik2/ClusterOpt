@@ -45,11 +45,11 @@ python setup.py install
 pip install ClusterOpt
 
 ```
-***The package requires lammps binding to run. First lammps package needs to be downloaded from  https://www.lammps.org/download.html and compiled. The instructions on python integration can be found here https://docs.lammps.org/Python_install.html.
+<p align="justify"> ***The package requires lammps binding to run. First lammps package needs to be downloaded from  https://www.lammps.org/download.html and compiled. The instructions on python integration can be found here https://docs.lammps.org/Python_install.html.</p>
 
 
 ### Running the code
-<p align="justify"> An example of running run directory provided in the example section. First all the parameters crystal and the lammps pair_style and pair_coeff should be set. The composition is given for e.g., a Au<2>Al<3> as "composition":{"Au":2,"Al:3"}, the minimum interatomic distances as a pandas dataframe with rows and coluns belong to each species in the same order they are mentioned in the composition. <\p>
+<p align="justify"> An example of running run directory provided in the example section. First all the parameters crystal and the lammps pair_style and pair_coeff should be set. The composition is given for e.g., a Au<2>Al<3> as "composition":{"Au":2,"Al:3"}, the minimum interatomic distances as a pandas dataframe with rows and columns belonging to each species in the same order they are mentioned in the composition. E.g.,</p>
 
 ``` python
 import numpy as np
@@ -81,6 +81,40 @@ lammps_args = {
 
 args = (constrains,lammps_args)
 
+```
+
+Once the parameters are set, the LammpsEvaluator can be initialized and the basinhopping optimizer can be set for the run
+
+ ``` python
+
+structData = createRandomData(constrains,trials = 1000)
+x0 = structData["parameters"]
+
+
+fun = LammpsEvaluator(constrains,lammps_args).snapshot
+res = minimize(fun, x0, args=args, method=Custom_minimize)
+
+print(res.x,res.fun)
+
+minimizer_kwargs = {"method":Custom_minimize,"args":args}
+
+def print_fun(x, f, accepted):
+    print("at minimum %.2e accepted %d" % (f, int(accepted)))
+
+basinhopping(fun,
+             x0, 
+             niter=1000,
+             T=1.0, 
+             stepsize=0.5, 
+             minimizer_kwargs=minimizer_kwargs, 
+             take_step=None, 
+             accept_test=None, 
+             callback=print_fun, 
+             interval=50, 
+             disp=False, 
+             niter_success=None, 
+             seed=None, 
+            )
 ```
 
 
