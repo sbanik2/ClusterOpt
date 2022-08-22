@@ -1,4 +1,4 @@
-#ClusterOpt
+# ClusterOpt
 
 <p align="justify"> Implementation of Basin Hopping Global Optimization method for optimization of Atomic nanoclusters. </p>
 
@@ -49,7 +49,7 @@ pip install ClusterOpt
 ### Running the code
 An example of running run directory provided in the example section. First all the parameters crystal and the lammps pair_style and pair_coeff should be set
 
-.. code:: python
+``` python
 import numpy as np
 import pandas as pd
 from ClusterOpt.Evaluator import Custom_minimize, LammpsEvaluator
@@ -79,6 +79,7 @@ lammps_args = {
 
 args = (constrains,lammps_args)
 
+```
 
 
 
