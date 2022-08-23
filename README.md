@@ -44,7 +44,7 @@ python setup.py install
 pip install ClusterOpt
 
 ```
-***The package requires lammps binding to run. First, lammps package needs to be downloaded from  [LAMMPS download](https://www.lammps.org/download.html) and compiled. The instructions on python integration can be found here [LAMMPS-Python](https://docs.lammps.org/Python_install.html).
+***The package requires python lammps binding to run. First, lammps package needs to be downloaded from  [LAMMPS download](https://www.lammps.org/download.html) and compiled. The instructions on python integration can be found here [LAMMPS-Python](https://docs.lammps.org/Python_install.html).
 
 
 ### Running the code
